@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "asemblée": "assemblée"
+  },
+  "regex_rules": ["\\d+e?"]
+}
