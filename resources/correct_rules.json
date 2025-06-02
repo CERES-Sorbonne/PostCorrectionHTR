@@ -1,6 +1,9 @@
 {
   "rules": {
-    "asemblée": "assemblée"
+    "asemblée": "assemblée",
+    "Pasourd'huy": "aujourdhuy"
   },
-  "regex_rules": ["\\d+e?"]
+  "regex_rules": [
+    "\\d+e?"
+  ]
 }
