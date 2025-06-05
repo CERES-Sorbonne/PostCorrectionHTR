@@ -22,3 +22,15 @@ Executer toutes les cellules de scripts/test_levenstein.ipynb c'est la dernière
   - On cherche des corrections possibles dans le dictionnaire avec Levenshtein et on les propose
   - Si il y en a des pertinentes on peut ajouter une nouvelle règle de correction avec la correction choisie. 
 
+## Utilisation de l'API
+
+- Installer les requirements avec pip install -r requirements.txt
+- Lancer avec `python -m uvicorn main:app --reload`
+
+## Améliorations à faire
+
+- Pouvoir sélectionner une zone à corriger, (si par exemple l'OCR a donné "A bsans" actuellement le programme va nous proposer de corriger "bsans" en "absent" alors que c'est "A" et "bsans" qu'il faudrait corriger)
+- Afficher un bout d'image originale si on a le fichier et la hbox
+- Pouvoir revenir en arrière après avoir corrigé
+- Nettoyer le code en utilisant une classe gérant un state
+- Tenter de faire d'autres corrections en utilisant mistral api
