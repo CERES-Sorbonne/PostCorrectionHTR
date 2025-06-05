@@ -4,9 +4,8 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
 
-from api.core import add_to_dico, load_dico, load_rules, generate_sample, get_most_similar_words, \
+from core import add_to_dico, load_dico, load_rules, generate_sample, get_most_similar_words, \
     save_rules
 
 dico, words_by_size = load_dico()
