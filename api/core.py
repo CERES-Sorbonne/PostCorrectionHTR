@@ -1,18 +1,15 @@
 import json
-import csv
 import re
 from Levenshtein import distance
 
 
-DICO_PATH = '../resources/dico.csv'
+DICO_PATH = '../resources/dico.json'
 RULES_PATH = '../resources/correct_rules.json'
+TO_CORRECT_PATH = "../resources/to_correct.txt"
 
 def load_dico():
-    dico = set()
     with open(DICO_PATH, 'r', encoding='utf-8') as f:
-        csv_reader = csv.reader(f, delimiter=',')
-        for line in csv_reader:
-            dico.add(line[0])
+        dico = set(json.load(f))
     words_by_size = {}
     dico_list = list(dico)
     dico_list.sort(key=len, reverse=True)
@@ -61,7 +58,10 @@ def add_to_dico(word, dico, words_by_size):
     return dico, words_by_size
 
 def generate_sample():
-    pass
+    with open(TO_CORRECT_PATH, 'r', encoding='utf-8') as f:
+        for line_index, line in enumerate(f):
+            for word in line.split():
+                yield word, line, line_index
 
 
 def get_most_similar_words(word, words_by_size):

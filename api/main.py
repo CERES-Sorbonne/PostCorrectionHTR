@@ -1,41 +1,78 @@
+import json
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 
-app = FastAPI()
+from api.core import add_to_dico, load_dico, load_rules, generate_sample, get_most_similar_words, \
+    save_rules
+
+dico, words_by_size = load_dico()
+rules, regex_rules = load_rules()
+word_gen = generate_sample()
+OUTPUT = [[]]
+CURRENT_LINE = 0
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    global OUTPUT
+    yield
+    # Clean up the ML models and release the resources
+    with open('../resources/corrected', 'w', encoding='utf-8') as f:
+        lines = [" ".join(line) for line in OUTPUT]
+        f.write("\n".join(lines))
+    save_rules(rules, regex_rules)
+    with open('../resources/dico.json', 'w', encoding='utf-8') as f:
+        json.dump(list(dico), f, ensure_ascii=False, indent=4)
+app = FastAPI(lifespan=lifespan)
 templates = Jinja2Templates(directory="templates")
 
-# Exemple temporaire de mots à corriger
-liste_mots = [
-    {"mot": "motfautif", "ligne": "Voici une phrase avec un motfautif.", "corrections": ["motif", "motifatif", "motifautif", "motifotif", "mou fautif"]},
-    # Ajouter plus de mots ici
-]
-index = 0
 
 @app.get("/")
 async def root(request: Request):
-    global index
-    if index >= len(liste_mots):
-        index = 0  # recommencer
-    data = liste_mots[index]
-    return templates.TemplateResponse("index.html", {
-        "request": request,
-        "mot": data["mot"],
-        "ligne": data["ligne"],
-        "corrections": data["corrections"]
-    })
+    global CURRENT_LINE, OUTPUT
+    for word, line, line_index in word_gen:
+        if CURRENT_LINE != line_index:
+            OUTPUT.append([])
+            CURRENT_LINE = line_index
+        if word.lower() in dico or word in dico:
+            OUTPUT[line_index].append(word)
+            continue
+        regex_match = False
+        for regex in regex_rules:
+            if regex.match(word.lower()):
+                regex_match = True
+                break
+        if regex_match:
+            OUTPUT[line_index].append(word)
+            continue
+        if word.lower() in rules or word in rules:
+            OUTPUT[line_index].append(rules[word])
+            continue
+        corrections = [c[0] for c in get_most_similar_words(word, words_by_size)][:5]
+        return templates.TemplateResponse("index.html", {
+            "request": request,
+            "mot": word,
+            "ligne": line,
+            "corrections": corrections,
+        })
 
 @app.post("/add")
 async def add_to_dictionary(mot: str = Form(...)):
+    global dico, words_by_size, OUTPUT
     print(f"Ajout au dictionnaire : {mot}")
-    # Traitement ici...
+    add_to_dico(mot, dico, words_by_size)
+    OUTPUT[-1].append(mot)
     return RedirectResponse("/", status_code=303)
 
 @app.post("/correct")
-async def correct_word(correction: str = Form(...)):
+async def correct_word(mot: str = Form(...), correction: str = Form(...)):
+    global OUTPUT
     print(f"Correction sélectionnée : {correction}")
-    # Traitement ici...
-    global index
-    index += 1
+    OUTPUT[-1].append(correction)
+    rules[mot] = correction
     return RedirectResponse("/", status_code=303)
+

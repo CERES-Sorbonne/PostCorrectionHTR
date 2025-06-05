@@ -35,20 +35,26 @@
     <!-- Colonne 2 -->
     <div class="col-md-4">
       <form id="form-correct" method="post" action="/correct">
-        {% for correction in corrections %}
-          <button type="submit" name="correction" value="{{ correction }}" class="btn btn-outline-primary w-100 mb-2 text-start" id="btn-correction-{{ loop.index }}">
-            <span class="d-flex align-items-center gap-2">
-              <span class="badge text-bg-primary">{{ loop.index }}</span>
-              {{ correction }}
-            </span>
-          </button>
-        {% endfor %}
+        <input type="hidden" name="mot" value="{{ mot }}">
+        {% if corrections %}
+          {% for correction in corrections %}
+            <button type="submit" name="correction" value="{{ correction }}" class="btn btn-outline-primary w-100 mb-2 text-start" id="btn-correction-{{ loop.index }}">
+              <span class="d-flex align-items-center gap-2">
+                <span class="badge text-bg-primary">{{ loop.index }}</span>
+                {{ correction }}
+              </span>
+            </button>
+          {% endfor %}
+        {% else %}
+          <button class="btn btn-secondary w-100 mb-2" disabled>Aucune correction proposée</button>
+        {% endif %}
       </form>
     </div>
 
     <!-- Colonne 3 -->
     <div class="col-md-4">
       <form method="post" action="/correct">
+        <input type="hidden" name="mot" value="{{ mot }}">
         <input type="text" name="correction" class="form-control mb-2" placeholder="Correction manuelle" autofocus>
         <button type="submit" class="btn btn-success w-100">Correction manuelle</button>
       </form>
