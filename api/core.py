@@ -66,7 +66,11 @@ def generate_sample():
 
 def get_most_similar_words(word, words_by_size):
     possible_results = []
-    all_words = words_by_size[len(word)] + words_by_size[len(word) + 1] + words_by_size[len(word) - 1]
+    all_words = words_by_size[len(word)]
+    if len(word) + 1 in words_by_size:
+        all_words += words_by_size[len(word) + 1]
+    if len(word) - 1 in words_by_size:
+        all_words += words_by_size[len(word) - 1]
     for word_to_compare in all_words:
         dist = distance(word, word_to_compare)
         if dist < 5:

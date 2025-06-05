@@ -19,7 +19,9 @@ CURRENT_LINE = 0
 async def lifespan(app: FastAPI):
     global OUTPUT
     yield
-    # Clean up the ML models and release the resources
+    save_all_data()
+
+def save_all_data():
     with open('../resources/corrected', 'w', encoding='utf-8') as f:
         lines = [" ".join(line) for line in OUTPUT]
         f.write("\n".join(lines))
@@ -33,31 +35,35 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/")
 async def root(request: Request):
     global CURRENT_LINE, OUTPUT
-    for word, line, line_index in word_gen:
-        if CURRENT_LINE != line_index:
-            OUTPUT.append([])
-            CURRENT_LINE = line_index
-        if word.lower() in dico or word in dico:
-            OUTPUT[line_index].append(word)
-            continue
-        regex_match = False
-        for regex in regex_rules:
-            if regex.match(word.lower()):
-                regex_match = True
-                break
-        if regex_match:
-            OUTPUT[line_index].append(word)
-            continue
-        if word.lower() in rules or word in rules:
-            OUTPUT[line_index].append(rules[word])
-            continue
-        corrections = [c[0] for c in get_most_similar_words(word, words_by_size)][:5]
-        return templates.TemplateResponse("index.html", {
-            "request": request,
-            "mot": word,
-            "ligne": line,
-            "corrections": corrections,
-        })
+    try:
+        for word, line, line_index in word_gen:
+            if CURRENT_LINE != line_index:
+                OUTPUT.append([])
+                CURRENT_LINE = line_index
+            if word.lower() in dico or word in dico:
+                OUTPUT[line_index].append(word)
+                continue
+            regex_match = False
+            for regex in regex_rules:
+                if regex.match(word.lower()):
+                    regex_match = True
+                    break
+            if regex_match:
+                OUTPUT[line_index].append(word)
+                continue
+            if word.lower() in rules or word in rules:
+                OUTPUT[line_index].append(rules[word])
+                continue
+            corrections = [c[0] for c in get_most_similar_words(word, words_by_size)][:5]
+            return templates.TemplateResponse("index.html", {
+                "request": request,
+                "mot": word,
+                "ligne": line,
+                "corrections": corrections,
+            })
+    except Exception as e:
+        save_all_data()
+
 
 @app.post("/add")
 async def add_to_dictionary(mot: str = Form(...)):
