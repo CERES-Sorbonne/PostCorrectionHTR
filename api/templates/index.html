@@ -15,9 +15,16 @@
   <h2 class="mb-4">Mot: "{{ mot }}" non trouvé</h2>
 
   <p class="fs-5">
+    {{ previous }}
+  </p>
+
+  <p class="fs-5">
     {{ ligne.replace(mot, '<mark>' ~ mot ~ '</mark>') | safe }}
   </p>
 
+  <p class="fs-5">
+    {{ next }}
+  </p>
   <div class="row">
     <!-- Colonne 1 -->
     <div class="col-md-4 text-center">
