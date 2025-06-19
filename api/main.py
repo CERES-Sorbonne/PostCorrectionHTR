@@ -1,4 +1,6 @@
+import html
 from contextlib import asynccontextmanager
+from xml.sax.saxutils import escape
 
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import RedirectResponse
@@ -21,6 +23,9 @@ templates = Jinja2Templates(directory="templates")
 async def root(request: Request):
     for word, prevl, line, nextl in iterator:
         corrections = manager.get_most_similar_words(word)
+        line = html.escape(line)
+        cleaned_word = html.escape(word)
+        line = line.replace(cleaned_word, f'<mark>{cleaned_word}</mark>')
         return templates.TemplateResponse("index.html", {
             "request": request,
             "mot": word,
