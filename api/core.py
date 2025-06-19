@@ -99,7 +99,7 @@ class DataManager:
                             self.correction[line_index].append(word)
                             continue
                         if self.is_word_in_rules(word):
-                            self.correction[line_index].append(self.rules[self.clean_word(word)])
+                            self.correction[line_index].append(self.rules[self.clean_word(word).lower()])
                             continue
                         previous_line = self.correct_line(previous_line)
                         corrected_line = self.correct_line(line)
@@ -112,7 +112,7 @@ class DataManager:
     def add_correction(self, word, correction):
         word = self.clean_word(word)
         self.correction[self.current_line].append(correction)
-        self.rules[word] = correction
+        self.rules[word.lower()] = correction
 
     def get_most_similar_words(self, word, nb_words=5):
         possible_results = []
@@ -157,13 +157,13 @@ class DataManager:
             word = word[:-1]
         if len(word) >= 1 and word[0] in self.punkt:
             word = word[1:]
-        return word
+        return word.strip()
 
     def correct_line(self, line):
         res = []
         for word in line.split():
             if self.is_word_in_rules(word):
-                res.append(self.rules[self.clean_word(word)])
+                res.append(self.rules[self.clean_word(word).lower()])
             else:
                 res.append(word)
         return " ".join(res)
