@@ -1,6 +1,51 @@
 {
   "rules": {
-    "asemblée": "assemblée"
+    "pasourd'huy": "cejourdhuy",
+    "1681e": "exre",
+    "ofsaires": "affaires",
+    "ddu": "Du",
+    "pouvois": "pouvoir",
+    "at": "et",
+    "danourt": "dancourt",
+    "peries": "Perier",
+    "trouueront": "trouveront",
+    "apropos": "à propos",
+    "prrvenir": "parvenir",
+    "cester": "cesser",
+    "fiflers": "billets",
+    "redeire": "reduire",
+    "gtaliens": "italiens",
+    "nejnir": "ne jouer",
+    "jalinnes": "italiennes",
+    "devillien": "devilliers",
+    "l'onrdinaire": "l'ordinaire",
+    "periers": "perier",
+    "guirin": "guérin",
+    "bsans": "bsens",
+    "debtrccourt": "de Brecourt",
+    "remerüé": "remercié",
+    "compapnie": "compagnie",
+    "berses": "bonter",
+    "pourelle": "pour elle",
+    "apoinn": "appoint",
+    "casques": "pasques",
+    "doneres": "dernieres",
+    "suivain": "suivant",
+    "guall": "Gnalle",
+    "dixheures": "dix heures",
+    "rosélie": "rosélis",
+    "drrs": "Mrs",
+    "lathorlliere": "lathorilliere",
+    "disposirion": "disposition",
+    "pourciaugnar": "pourceaugnac",
+    "courccaugnat": "pourceaugnac",
+    ".": "d",
+    "pedeun": "perdu",
+    "medicin": "medecin",
+    "suilse": "suisse",
+    "lepere": "Le pere"
   },
-  "regex_rules": ["\\d+e?"]
+  "regex_rules": [
+    "\\d+e?"
+  ]
 }
