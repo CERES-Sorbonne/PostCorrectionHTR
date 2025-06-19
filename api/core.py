@@ -1,15 +1,22 @@
 import json
+import os
 import re
+
 from collections import defaultdict
 from functools import partial, wraps, partialmethod
+from pathlib import Path
 
 from Levenshtein import distance
+from PIL import Image
 
+from api.models import WordContext
+from api.utils import parse_xml_lines, crop_image_for_context, _get_xml_files
 
 DICO_PATH = '../resources/dico.json'
 RULES_PATH = '../resources/correct_rules.json'
 TO_CORRECT_PATH = "../resources/to_correct.txt"
 CORRECTED_PATH = "../resources/corrected.txt"
+XML_FILES_PATH = "../resources/xml_files"
 
 
 class DataManager:
@@ -75,45 +82,88 @@ class DataManager:
             self.words_by_size[len(word)].append(word)
         self.correction[self.current_line].append(word)
 
-    def generate_sample(self):
-        try:
-            with open(TO_CORRECT_PATH, 'r', encoding='utf-8') as f:
-                all_lines = f.readlines()
-                for line_index, line in enumerate(all_lines):
-                    previous_line = "" if line_index == 0 else all_lines[line_index - 1]
-                    self.current_line = line_index
-                    next_line = "" if line_index == len(all_lines) - 1 else all_lines[line_index + 1]
+    def generate_sample_from_xml(self):
+        all_xml = _get_xml_files(XML_FILES_PATH)
+        for xml_file in all_xml:
+            try:
+                print(f"Traitement de {xml_file}")
+                image_path = Path(xml_file).with_suffix('.jpg')
+                image = Image.open(image_path)
 
-                    if line_index % 10 == 0:
+                # Parser les lignes du XML
+                lines = parse_xml_lines(xml_file)
+
+                for line_index, current_line in enumerate(lines):
+                    current_image: Image = None
+
+                    # Sauvegarder périodiquement (si applicable)
+                    if hasattr(self, 'save_data') and line_index % 10 == 0:
                         self.save_data()
-                    for word in line.split():
+
+                    # Déterminer les lignes précédente et suivante
+                    previous_line = lines[line_index - 1] if line_index > 0 else None
+                    next_line = lines[line_index + 1] if line_index < len(lines) - 1 else None
+
+                    # Traiter chaque mot de la ligne courante
+                    words = current_line.content.split()
+
+                    for word in words:
+                        if line_index % 10 == 0:
+                            self.save_data()
                         if self.is_word_in_dico(word):
                             self.correction[line_index].append(word)
                             continue
                         regex_match = False
-                        for regex in self.regex_rules:
-                            if regex.match(word.lower()):
-                                regex_match = True
-                                break
-                        if regex_match:
-                            self.correction[line_index].append(word)
-                            continue
+                        # for regex in self.regex_rules:
+                        #     if regex.match(word.lower()):
+                        #         regex_match = True
+                        #         break
+                        # if regex_match:
+                        #     self.correction[line_index].append(word)
+                        #     continue
                         if self.is_word_in_rules(word):
                             self.correction[line_index].append(self.rules[self.clean_word(word).lower()])
                             continue
-                        previous_line = self.correct_line(previous_line)
-                        corrected_line = self.correct_line(line)
-                        yield word, previous_line, corrected_line, next_line
-        except Exception as e:
-            print(e)
-            self.save_data()
-            raise e
+
+                        corrected_previous_line = self.correct_line(previous_line.content.split()) if previous_line else ""
+                        corrected_current_line = self.correct_line(words)
+                        if not current_image:
+                            # Créer l'image croppée avec le contexte des 3 lignes
+                            current_image = crop_image_for_context(
+                                image, current_line, previous_line, next_line
+                            )
+
+                        # Créer le contexte complet
+                        context = WordContext(
+                            word=word,
+                            current_line=corrected_current_line,
+                            previous_line=corrected_previous_line,
+                            next_line=next_line.content if next_line else "",
+                            cropped_image=current_image,
+                            xml_file=xml_file,
+                            line_index=line_index
+                        )
+
+                        yield context
+            except Exception as e:
+                print("error occured", e)
+                self.save_dico()
+
+            # Fermer l'image pour libérer la mémoire
+            image.close()
+
+
 
     def add_correction(self, word, correction):
         word = self.clean_word(word)
-        if word:
-            self.correction[self.current_line].append(correction)
-        self.rules[word.lower()] = correction
+        regex_match = self.check_regex(word)
+        # on ne sauvegarde pas de règle de correction si correction est vide
+        if correction:
+            self.rules[word.lower()] = correction
+        # si la correction est vide mais que le mot match une regex on remplace correction par le mot
+        elif not correction and regex_match:
+            correction = word
+        self.correction[self.current_line].append(correction)
 
     def get_most_similar_words(self, word, nb_words=5):
         possible_results = []
@@ -160,11 +210,20 @@ class DataManager:
             word = word[1:]
         return word.strip()
 
-    def correct_line(self, line):
+    def correct_line(self, words):
         res = []
-        for word in line.split():
+        for word in words:
             if self.is_word_in_rules(word):
                 res.append(self.rules[self.clean_word(word).lower()])
             else:
                 res.append(word)
         return " ".join(res)
+
+    def check_regex(self, word):
+        regex_match = False
+        # si le mot est une regex alors on ne sauvegarde pas de règle non plus
+        for regex in self.regex_rules:
+            if regex.match(word.lower()):
+                regex_match = True
+                break
+        return regex_match

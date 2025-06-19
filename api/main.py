@@ -6,10 +6,11 @@ from fastapi import FastAPI, Request, Form
 from fastapi.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
 
+from api.models import WordContext
 from core import DataManager
 
 manager = DataManager()
-iterator = manager.generate_sample()
+iterator = manager.generate_sample_from_xml()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -21,7 +22,10 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/")
 async def root(request: Request):
-    for word, prevl, line, nextl in iterator:
+    wc: WordContext
+    for wc in iterator:
+        word = wc.word
+        line = wc.current_line
         corrections = manager.get_most_similar_words(word)
         line = html.escape(line)
         cleaned_word = html.escape(word)
@@ -29,9 +33,10 @@ async def root(request: Request):
         return templates.TemplateResponse("index.html", {
             "request": request,
             "mot": word,
-            "previous": prevl,
+            "previous": wc.previous_line,
             "ligne": line,
-            "next": nextl,
+            "next": wc.next_line,
+            "image": wc.cropped_image.decode(),
             "corrections": corrections,
         })
 
