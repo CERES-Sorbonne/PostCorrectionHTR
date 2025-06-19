@@ -111,7 +111,8 @@ class DataManager:
 
     def add_correction(self, word, correction):
         word = self.clean_word(word)
-        self.correction[self.current_line].append(correction)
+        if word:
+            self.correction[self.current_line].append(correction)
         self.rules[word.lower()] = correction
 
     def get_most_similar_words(self, word, nb_words=5):
