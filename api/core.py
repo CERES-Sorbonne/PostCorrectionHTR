@@ -1,16 +1,15 @@
 import json
-import os
 import re
 
 from collections import defaultdict
-from functools import partial, wraps, partialmethod
+from functools import  partialmethod
 from pathlib import Path
 
 from Levenshtein import distance
 from PIL import Image
 
-from api.models import WordContext
-from api.utils import parse_xml_lines, crop_image_for_context, _get_xml_files
+from models import WordContext
+from utils import parse_xml_lines, crop_image_for_context, _get_xml_files
 
 DICO_PATH = '../resources/dico.json'
 RULES_PATH = '../resources/correct_rules.json'
@@ -26,7 +25,7 @@ class DataManager:
         self.rules = {}
         self.regex_rules = []
         self.correction = defaultdict(list)
-        self.current_line = 0
+        self.current_line_index = 0
         self.nb_actions = 0
         self.punkt = [',', ';', '!', '.']
 
@@ -69,9 +68,12 @@ class DataManager:
             json.dump(list(self.dico), f, ensure_ascii=False, indent=2)
 
     def save_correction(self):
+        if not self.correction:
+            return
         with open(CORRECTED_PATH, 'a', encoding='utf-8') as f:
             lines = [" ".join(line) for line in self.correction.values()]
-            f.write("\n" + "\n".join(lines))
+            to_write = "" if self.current_line_index == 0 else "\n"
+            f.write(to_write + "\n".join(lines))
         del self.correction
         self.correction = defaultdict(list)
 
@@ -80,7 +82,7 @@ class DataManager:
         self.dico.add(word)
         if word not in self.words_by_size[len(word)]:
             self.words_by_size[len(word)].append(word)
-        self.correction[self.current_line].append(word)
+        self.correction[self.current_line_index].append(word)
 
     def generate_sample_from_xml(self):
         all_xml = _get_xml_files(XML_FILES_PATH)
@@ -94,6 +96,7 @@ class DataManager:
                 lines = parse_xml_lines(xml_file)
 
                 for line_index, current_line in enumerate(lines):
+                    self.current_line_index = line_index
                     current_image: Image = None
 
                     # Sauvegarder périodiquement (si applicable)
@@ -163,7 +166,7 @@ class DataManager:
         # si la correction est vide mais que le mot match une regex on remplace correction par le mot
         elif not correction and regex_match:
             correction = word
-        self.correction[self.current_line].append(correction)
+        self.correction[self.current_line_index].append(correction)
 
     def get_most_similar_words(self, word, nb_words=5):
         possible_results = []

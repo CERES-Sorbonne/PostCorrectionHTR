@@ -6,7 +6,7 @@ from fastapi import FastAPI, Request, Form
 from fastapi.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
 
-from api.models import WordContext
+from models import WordContext
 from core import DataManager
 
 manager = DataManager()
