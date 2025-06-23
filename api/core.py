@@ -100,7 +100,7 @@ class DataManager:
                     current_image: Image = None
 
                     # Sauvegarder périodiquement (si applicable)
-                    if hasattr(self, 'save_data') and line_index % 10 == 0:
+                    if line_index % 10 == 0:
                         self.save_data()
 
                     # Déterminer les lignes précédente et suivante
@@ -111,8 +111,6 @@ class DataManager:
                     words = current_line.content.split()
 
                     for word in words:
-                        if line_index % 10 == 0:
-                            self.save_data()
                         if self.is_word_in_dico(word):
                             self.correction[line_index].append(word)
                             continue

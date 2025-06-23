@@ -43,7 +43,6 @@ def parse_xml_lines(xml_file: str) -> list[LineInfo]:
             height=height,
         ))
 
-    lines.sort(key=lambda x: x.vpos)
     return lines
 
 def get_bounding_box_for_lines(lines: list[LineInfo]) -> tuple[int, int, int, int]:
