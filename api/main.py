@@ -48,8 +48,8 @@ async def add_to_dictionary(mot: str = Form(...)):
     return RedirectResponse("/", status_code=303)
 
 @app.post("/correct")
-async def correct_word(mot: str = Form(...), correction: str = Form(...)):
+async def correct_word(mot: str = Form(...), correction: str = Form(...), save_rule: bool = True):
     print(f"Correction sélectionnée : {correction}")
-    manager.add_correction(mot, correction)
+    manager.add_correction(mot, correction, save_rule)
     return RedirectResponse("/", status_code=303)
 
