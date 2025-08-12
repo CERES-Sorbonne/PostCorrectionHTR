@@ -13,9 +13,9 @@ from utils import parse_xml_lines, crop_image_for_context, _get_xml_files
 
 DICO_PATH = '../resources/dico.json'
 RULES_PATH = '../resources/correct_rules.json'
-TO_CORRECT_PATH = "../resources/to_correct.txt"
-CORRECTED_PATH = "../resources/corrected.txt"
-XML_FILES_PATH = "../resources/xml_files"
+TO_CORRECT_PATH = "../resources/R52_0_1699_corrected.txt"
+CORRECTED_PATH = "../resources/R52_0_1699"
+XML_FILES_PATH = "../resources/xml_files/R52_0_1699"
 
 
 class DataManager:
@@ -148,6 +148,7 @@ class DataManager:
                         yield context
             except Exception as e:
                 print("error occured", e)
+                raise e
                 self.save_dico()
 
             # Fermer l'image pour libérer la mémoire

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.loc.gov/standards/alto/ns-v4#"
+      xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v4# http://www.loc.gov/standards/alto/v4/alto-4-2.xsd">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>R52_0_1699_11.jpg</fileName>
+      <fileIdentifier>mets//export_doc31_r52_0_1699_alto_202508050948.zip/R52_0_1699_11.jpg</fileIdentifier>
+    </sourceImageInformation>
+  </Description>
+  <Tags>
+    <OtherTag ID="BT1" LABEL="Title" DESCRIPTION="block type Title"/><OtherTag ID="BT2" LABEL="Main" DESCRIPTION="block type Main"/><OtherTag ID="BT3" LABEL="Commentary" DESCRIPTION="block type Commentary"/><OtherTag ID="BT4" LABEL="Illustration" DESCRIPTION="block type Illustration"/><OtherTag ID="BT61" LABEL="text" DESCRIPTION="block type text"/>
+    <OtherTag ID="LT51" LABEL="default" DESCRIPTION="line type default"/>
+  </Tags>
+  <Layout>
+    <Page WIDTH="1462"
+          HEIGHT="2111"
+          PHYSICAL_IMG_NR="10"
+          ID="eSc_dummypage_">
+      <PrintSpace HPOS="0"
+                  VPOS="0"
+                  WIDTH="1462"
+                  HEIGHT="2111">
+        <TextBlock HPOS="787.0"
+                   VPOS="1050.0"
+                   WIDTH="613.0"
+                   HEIGHT="285.0"
+                   ID="eSc_textblock_40a00ba7"
+                   TAGREFS="BT61">
+          <Shape><Polygon POINTS="862 1050 1349 1060 1386 1121 1400 1223 1349 1265 1106 1274 1053 1335 998 1326 992 1288 838 1284 806 1256 787 1125 796 1083 862 1050"/></Shape>
+          <TextLine ID="eSc_line_e19c71b6"
+                    TAGREFS="LT51"
+                    BASELINE="816 1110 1243 1090" 
+                    HPOS="814.0"
+                    VPOS="1054.0"
+                    WIDTH="429.0"
+                    HEIGHT="74.0">
+            <Shape><Polygon POINTS="1201 1056 1189 1056 1178 1056 1166 1056 1162 1055 1159 1060 1156 1062 1125 1062 1119 1060 1107 1055 1107 1055 1095 1054 1088 1054 1081 1061 1077 1066 1061 1066 1048 1061 1027 1054 1026 1054 1025 1054 989 1062 952 1070 917 1063 915 1063 914 1063 910 1063 890 1068 885 1063 882 1061 881 1061 880 1061 878 1061 831 1063 826 1067 814 1073 816 1110 816 1128 876 1121 919 1123 925 1123 926 1123 928 1123 929 1123 946 1114 1019 1111 1030 1116 1033 1118 1034 1118 1036 1118 1037 1118 1038 1118 1038 1117 1039 1117 1039 1116 1044 1110 1057 1115 1065 1117 1066 1117 1067 1117 1088 1112 1119 1107 1151 1109 1167 1110 1168 1110 1169 1110 1178 1108 1188 1104 1195 1107 1208 1110 1209 1110 1210 1110 1243 1103 1243 1090 1240 1059 1212 1056 1201 1056"/></Shape>
+	    <String CONTENT="suite des seuilles"
+                    HPOS="814.0"
+                    VPOS="1054.0"
+                    WIDTH="429.0"
+                    HEIGHT="74.0"
+                    WC="0.990371392832862"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_1df75087"
+                    TAGREFS="LT51"
+                    BASELINE="820 1168 874 1169 1073 1154 1334 1148" 
+                    HPOS="817.0"
+                    VPOS="1105.0"
+                    WIDTH="517.0"
+                    HEIGHT="84.0">
+            <Shape><Polygon POINTS="820 1168 820 1183 905 1189 907 1189 908 1189 929 1179 939 1175 955 1178 968 1182 969 1182 970 1182 971 1182 986 1177 1010 1170 1025 1176 1036 1180 1037 1180 1038 1180 1039 1180 1040 1180 1040 1179 1045 1175 1054 1166 1132 1172 1144 1172 1145 1172 1146 1172 1148 1171 1167 1164 1195 1170 1200 1170 1201 1170 1207 1169 1256 1158 1332 1164 1334 1148 1331 1116 1316 1109 1315 1109 1314 1109 1273 1118 1222 1105 1221 1105 1220 1105 1138 1110 1136 1110 1135 1110 1135 1111 1122 1125 1105 1127 1050 1127 1031 1116 1030 1116 1029 1116 1004 1116 1003 1116 1002 1116 1000 1116 984 1129 957 1130 936 1117 935 1117 933 1117 932 1117 914 1118 912 1118 911 1118 891 1134 848 1122 847 1122 845 1122 844 1122 843 1122 817 1136 820 1168"/></Shape>
+	    <String CONTENT="d’assemblées relatines"
+                    HPOS="817.0"
+                    VPOS="1105.0"
+                    WIDTH="517.0"
+                    HEIGHT="84.0"
+                    WC="0.9970586570826444"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_f647efe0"
+                    TAGREFS="LT51"
+                    BASELINE="814 1243 1386 1218" 
+                    HPOS="811.0"
+                    VPOS="1177.0"
+                    WIDTH="575.0"
+                    HEIGHT="97.0">
+            <Shape><Polygon POINTS="814 1243 816 1271 842 1259 895 1259 909 1266 924 1274 925 1274 926 1274 928 1274 968 1264 1005 1252 1060 1251 1081 1251 1090 1257 1106 1272 1107 1272 1108 1272 1109 1272 1192 1268 1193 1268 1194 1268 1215 1253 1246 1266 1247 1266 1248 1266 1305 1264 1324 1263 1325 1263 1327 1263 1351 1245 1376 1250 1377 1250 1378 1250 1379 1250 1386 1243 1386 1218 1381 1177 1352 1185 1336 1179 1335 1179 1334 1179 1259 1183 1257 1183 1256 1183 1256 1184 1240 1197 1216 1199 1097 1203 1087 1196 1086 1196 1085 1196 1084 1196 1013 1205 996 1198 992 1197 991 1197 990 1197 989 1197 982 1199 963 1204 958 1200 953 1197 953 1196 952 1196 951 1196 950 1196 949 1196 929 1202 907 1209 899 1203 897 1202 896 1202 895 1202 894 1202 892 1202 887 1204 876 1209 861 1205 837 1200 836 1200 835 1200 811 1207 814 1243"/></Shape>
+	    <String CONTENT="aux premières en llasseres"
+                    HPOS="811.0"
+                    VPOS="1177.0"
+                    WIDTH="575.0"
+                    HEIGHT="97.0"
+                    WC="0.9461365594313695"></String>
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>
