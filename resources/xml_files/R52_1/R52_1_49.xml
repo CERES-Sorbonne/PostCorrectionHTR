@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.loc.gov/standards/alto/ns-v4#"
+      xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v4# http://www.loc.gov/standards/alto/v4/alto-4-2.xsd">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>R52_1_49.jpg</fileName>
+    </sourceImageInformation>
+  </Description>
+  <Tags>
+    <OtherTag ID="BT1" LABEL="Title" DESCRIPTION="block type Title"/><OtherTag ID="BT2" LABEL="Main" DESCRIPTION="block type Main"/><OtherTag ID="BT3" LABEL="Commentary" DESCRIPTION="block type Commentary"/><OtherTag ID="BT4" LABEL="Illustration" DESCRIPTION="block type Illustration"/><OtherTag ID="BT21" LABEL="text" DESCRIPTION="block type text"/>
+    <OtherTag ID="LT19" LABEL="default" DESCRIPTION="line type default"/>
+  </Tags>
+  <Layout>
+    <Page WIDTH="1632"
+          HEIGHT="2256"
+          PHYSICAL_IMG_NR="48"
+          ID="eSc_dummypage_">
+      <PrintSpace HPOS="0"
+                  VPOS="0"
+                  WIDTH="1632"
+                  HEIGHT="2256">
+        <TextBlock HPOS="371"
+                   VPOS="155"
+                   WIDTH="1115"
+                   HEIGHT="174"
+                   ID="eSc_textblock_e743d37b"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="724 155 1456 160 1486 214 1456 284 1260 329 386 329 371 240 411 165 724 155"/></Shape>
+          <TextLine ID="eSc_line_ad15a01c"
+                    TAGREFS="LT19"
+                    BASELINE="418 213 872 200 1461 198" 
+                    HPOS="417"
+                    VPOS="157"
+                    WIDTH="1044"
+                    HEIGHT="76">
+            <Shape><Polygon POINTS="1232 157 1219 157 1207 157 1194 157 1188 157 1169 170 1164 172 1148 170 1118 164 1116 164 1115 164 1101 169 1088 176 1037 176 1026 169 1016 162 1015 162 1014 162 972 160 803 160 802 160 773 161 772 161 759 169 742 179 727 167 725 167 724 167 723 167 719 167 685 176 664 169 663 169 661 169 660 169 632 180 596 167 584 164 582 164 549 164 547 164 546 164 538 167 507 184 486 184 447 167 442 165 441 165 439 165 417 166 418 213 418 230 433 233 434 233 436 233 441 230 463 219 511 226 512 228 512 226 560 219 590 226 607 231 609 231 610 231 655 225 723 215 805 221 888 228 889 228 891 228 892 228 904 219 913 213 1026 211 1041 215 1070 225 1071 225 1072 225 1074 225 1105 214 1119 210 1175 210 1180 213 1197 223 1198 223 1199 223 1200 224 1288 224 1288 223 1460 205 1461 198 1457 171 1264 172 1259 170 1234 157 1232 157"/></Shape>
+	    <String CONTENT="du a raporte la loge de monsieur le prence"
+                    HPOS="417"
+                    VPOS="157"
+                    WIDTH="1044"
+                    HEIGHT="76"
+                    WC="0.9840766333398365"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_da904654"
+                    TAGREFS="LT19"
+                    BASELINE="384 266 854 248 1462 245" 
+                    HPOS="383"
+                    VPOS="208"
+                    WIDTH="1079"
+                    HEIGHT="75">
+            <Shape><Polygon POINTS="384 266 384 283 597 282 599 282 601 280 629 269 700 274 701 274 883 264 967 271 968 271 970 271 988 263 1010 268 1011 268 1012 268 1123 261 1161 271 1164 271 1165 271 1166 271 1171 271 1229 258 1286 258 1303 266 1304 266 1306 266 1307 266 1346 256 1373 265 1375 265 1376 266 1462 266 1462 245 1459 221 1354 223 1351 221 1317 208 1316 208 1314 208 1313 208 1312 208 1291 221 1287 224 1282 221 1274 219 1273 219 1272 219 1255 221 1239 225 1227 223 1187 210 1185 210 1184 210 1130 219 1086 213 1085 213 1084 213 1082 213 1067 221 920 215 918 215 917 215 882 224 863 229 849 224 831 218 829 218 828 218 827 218 800 225 784 229 772 225 768 224 767 224 765 224 764 224 760 225 743 230 733 225 727 221 725 221 724 221 723 221 711 225 686 234 664 226 663 226 661 226 595 236 525 226 513 225 512 225 511 225 507 226 475 238 437 226 427 224 426 224 424 224 383 226 384 266"/></Shape>
+	    <String CONTENT="De conty pour monsieur le conte de la maoche qu&#x27;on"
+                    HPOS="383"
+                    VPOS="208"
+                    WIDTH="1079"
+                    HEIGHT="75"
+                    WC="0.9843599927425385"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_c1f40c73"
+                    TAGREFS="LT19"
+                    BASELINE="399 324 831 302 1225 288 1347 301" 
+                    HPOS="394"
+                    VPOS="246"
+                    WIDTH="952"
+                    HEIGHT="109">
+            <Shape><Polygon POINTS="398 323 398 349 441 355 466 336 530 351 597 329 627 342 635 342 648 329 731 334 851 319 930 327 957 315 992 329 1020 313 1047 327 1152 329 1344 315 1346 300 1340 246 1299 259 1197 250 1145 265 1098 253 1047 268 947 259 797 278 753 266 746 266 729 280 701 268 594 285 543 274 485 291 394 291 398 323"/></Shape>
+	    <String CONTENT="a mile dans la chambrée dhier 11e octbre 706"
+                    HPOS="394"
+                    VPOS="246"
+                    WIDTH="952"
+                    HEIGHT="109"
+                    WC="0.95483071627942"></String>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HPOS="661"
+                   VPOS="345"
+                   WIDTH="4"
+                   HEIGHT="9"
+                   ID="eSc_textblock_e96dc8d0"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="663 345 665 345 665 354 661 354 663 345"/></Shape>
+        </TextBlock>
+        <TextBlock HPOS="1613"
+                   VPOS="857"
+                   WIDTH="13"
+                   HEIGHT="19"
+                   ID="eSc_textblock_17523618"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="1620 857 1626 876 1613 876 1613 862 1620 857"/></Shape>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

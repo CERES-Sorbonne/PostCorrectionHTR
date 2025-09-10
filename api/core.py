@@ -13,9 +13,9 @@ from utils import parse_xml_lines, crop_image_for_context, _get_xml_files
 
 DICO_PATH = '../resources/dico.json'
 RULES_PATH = '../resources/correct_rules.json'
-TO_CORRECT_PATH = "../resources/R52_0_1699_corrected.txt"
-CORRECTED_PATH = "../resources/R52_0_1699"
-XML_FILES_PATH = "../resources/xml_files/R52_0_1699"
+TO_CORRECT_PATH = "../resources/R52_0_1705_corrected.txt"
+CORRECTED_PATH = "../resources/R52_0_1705"
+XML_FILES_PATH = "../resources/xml_files/R52_0_1705_alto"
 
 
 class DataManager:
