@@ -158,11 +158,14 @@ class DataManager:
     def add_correction(self, word, correction, save_rule=True):
         word = self.clean_word(word)
         regex_match = self.check_regex(word)
-        # on ne une règle de correction que si correction n'est pas vide
-        if correction and save_rule:
+        # on save une règle QUE si il:
+        # - il y a une correction
+        # - le paramètre save_rule est true
+        # - on ne match pas de regex (par exemple les nombres)
+        if correction and save_rule and not regex_match:
             self.rules[word.lower()] = correction
         # si la correction est vide mais que le mot match une regex on remplace correction par le mot
-        elif not correction and regex_match:
+        elif not correction:
             correction = word
         self.correction[self.current_line_index].append(correction)
 
