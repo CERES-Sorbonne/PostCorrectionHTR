@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.loc.gov/standards/alto/ns-v4#"
+      xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v4# http://www.loc.gov/standards/alto/v4/alto-4-2.xsd">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>R52_1_03.jpg</fileName>
+    </sourceImageInformation>
+  </Description>
+  <Tags>
+    <OtherTag ID="BT1" LABEL="Title" DESCRIPTION="block type Title"/><OtherTag ID="BT2" LABEL="Main" DESCRIPTION="block type Main"/><OtherTag ID="BT3" LABEL="Commentary" DESCRIPTION="block type Commentary"/><OtherTag ID="BT4" LABEL="Illustration" DESCRIPTION="block type Illustration"/><OtherTag ID="BT21" LABEL="text" DESCRIPTION="block type text"/>
+    <OtherTag ID="LT19" LABEL="default" DESCRIPTION="line type default"/>
+  </Tags>
+  <Layout>
+    <Page WIDTH="1631"
+          HEIGHT="2256"
+          PHYSICAL_IMG_NR="2"
+          ID="eSc_dummypage_">
+      <PrintSpace HPOS="0"
+                  VPOS="0"
+                  WIDTH="1631"
+                  HEIGHT="2256">
+        <TextBlock HPOS="381"
+                   VPOS="175"
+                   WIDTH="1189"
+                   HEIGHT="425"
+                   ID="eSc_textblock_cf133355"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="492 175 1460 205 1565 225 1570 269 1500 310 1465 505 1410 600 1060 585 461 600 401 555 381 491 426 461 455 466 471 431 511 424 516 376 441 339 421 264 431 195 492 175"/></Shape>
+          <TextLine ID="eSc_line_51398cb9"
+                    TAGREFS="LT19"
+                    BASELINE="433 243 529 236 794 234 1108 239 1301 253 1562 244" 
+                    HPOS="432"
+                    VPOS="184"
+                    WIDTH="1082"
+                    HEIGHT="90">
+            <Shape><Polygon POINTS="1017 201 931 191 930 191 928 191 902 204 883 200 882 200 881 200 862 208 839 199 838 199 837 199 836 199 824 203 803 188 802 188 801 188 719 188 718 188 717 188 695 196 643 190 641 190 640 190 639 190 619 203 600 188 599 188 597 188 495 184 493 184 492 184 433 201 433 243 432 261 508 263 510 263 511 263 585 246 605 255 606 255 608 255 609 255 610 255 621 248 705 248 745 263 747 263 748 263 749 263 788 249 868 249 901 263 902 263 903 263 905 263 950 251 974 259 975 259 976 259 1109 253 1162 255 1182 270 1183 270 1184 270 1185 270 1330 264 1345 273 1346 273 1347 273 1348 273 1353 273 1412 268 1511 274 1514 254 1513 221 1464 213 1463 213 1404 219 1387 220 1134 219 1122 214 1053 191 1048 191"/></Shape>
+	    <String CONTENT="Monser de Ponteüil, un demi quart à Mon"
+                    HPOS="432"
+                    VPOS="184"
+                    WIDTH="1082"
+                    HEIGHT="90"
+                    WC="0.970215088281876"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_fe04cd50"
+                    TAGREFS="LT19"
+                    BASELINE="444 306 724 305" 
+                    HPOS="443"
+                    VPOS="261"
+                    WIDTH="279"
+                    HEIGHT="77">
+            <Shape><Polygon POINTS="443 304 443 330 492 325 507 330 532 338 534 338 536 338 538 338 570 329 581 325 596 327 660 338 662 338 722 323 722 304 722 274 622 274 617 270 598 261 596 261 594 261 553 270 539 272 526 268 498 261 496 261 494 261 443 266 443 304"/></Shape>
+	    <String CONTENT="Duboccage."
+                    HPOS="443"
+                    VPOS="261"
+                    WIDTH="279"
+                    HEIGHT="77"
+                    WC="0.9838913917541504"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_14e8b492"
+                    TAGREFS="LT19"
+                    BASELINE="808 326 1068 321" 
+                    HPOS="803"
+                    VPOS="259"
+                    WIDTH="263"
+                    HEIGHT="83">
+            <Shape><Polygon POINTS="807 325 807 342 1066 340 1066 319 1062 280 991 270 989 270 972 272 918 282 897 266 886 259 884 259 882 259 880 259 803 259 807 325"/></Shape>
+	    <String CONTENT="Dancourt"
+                    HPOS="803"
+                    VPOS="259"
+                    WIDTH="263"
+                    HEIGHT="83"
+                    WC="0.9982768893241882"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_540ac627"
+                    TAGREFS="LT19"
+                    BASELINE="1198 365 1287 358 1468 353" 
+                    HPOS="1195"
+                    VPOS="314"
+                    WIDTH="273"
+                    HEIGHT="88">
+            <Shape><Polygon POINTS="1198 365 1199 402 1259 398 1261 398 1262 398 1269 393 1274 389 1281 392 1292 394 1293 394 1295 394 1296 394 1297 394 1307 388 1327 376 1346 378 1347 378 1348 378 1350 378 1360 370 1386 377 1389 377 1390 377 1391 377 1395 376 1410 369 1416 373 1435 383 1436 383 1437 383 1439 383 1440 383 1468 365 1468 353 1464 327 1427 327 1422 325 1395 317 1394 317 1392 317 1391 317 1390 317 1390 318 1381 325 1379 328 1372 324 1351 314 1350 314 1348 314 1347 314 1330 324 1316 332 1288 329 1283 324 1273 315 1273 314 1272 314 1271 314 1269 314 1195 322 1198 365"/></Shape>
+	    <String CONTENT="Guérin"
+                    HPOS="1195"
+                    VPOS="314"
+                    WIDTH="273"
+                    HEIGHT="88"
+                    WC="0.9999999006589254"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_dfdea2d2"
+                    TAGREFS="LT19"
+                    BASELINE="551 409 810 394" 
+                    HPOS="543"
+                    VPOS="342"
+                    WIDTH="267"
+                    HEIGHT="126">
+            <Shape><Polygon POINTS="549 407 551 458 741 468 743 468 744 468 746 468 780 443 780 441 810 439 808 392 803 357 711 360 694 351 679 344 677 344 675 344 673 344 671 344 664 349 639 366 613 347 605 342 603 342 601 342 600 342 543 344 549 407"/></Shape>
+	    <String CONTENT="De fonpré"
+                    HPOS="543"
+                    VPOS="342"
+                    WIDTH="267"
+                    HEIGHT="126"
+                    WC="0.9966468016306559"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_6b10ca70"
+                    TAGREFS="LT19"
+                    BASELINE="747 491 1088 490" 
+                    HPOS="744"
+                    VPOS="424"
+                    WIDTH="343"
+                    HEIGHT="158">
+            <Shape><Polygon POINTS="746 490 746 582 829 573 886 582 910 560 944 571 991 554 1004 567 1013 567 1030 554 1085 554 1087 488 1081 449 1013 449 998 438 955 449 927 424 919 424 874 441 850 424 775 424 744 441 746 490"/></Shape>
+	    <String CONTENT="DuBocage"
+                    HPOS="744"
+                    VPOS="424"
+                    WIDTH="343"
+                    HEIGHT="158"
+                    WC="0.9409559369087219"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_979c284b"
+                    TAGREFS="LT19"
+                    BASELINE="1158 490 1375 480" 
+                    HPOS="1155"
+                    VPOS="426"
+                    WIDTH="218"
+                    HEIGHT="98">
+            <Shape><Polygon POINTS="1156 488 1156 524 1241 509 1266 515 1288 520 1290 520 1292 520 1373 501 1373 479 1367 449 1320 449 1282 426 1281 426 1279 426 1277 426 1155 456 1156 488"/></Shape>
+	    <String CONTENT="Baron"
+                    HPOS="1155"
+                    VPOS="426"
+                    WIDTH="218"
+                    HEIGHT="98"
+                    WC="0.9999917507171631"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_c8b8e8d6"
+                    TAGREFS="LT19"
+                    BASELINE="403 532 652 511" 
+                    HPOS="396"
+                    VPOS="466"
+                    WIDTH="254"
+                    HEIGHT="90">
+            <Shape><Polygon POINTS="396 477 402 530 404 554 538 556 539 556 650 532 650 509 645 466 536 483 406 471 396 477"/></Shape>
+	    <String CONTENT="Desmares"
+                    HPOS="396"
+                    VPOS="466"
+                    WIDTH="254"
+                    HEIGHT="90"
+                    WC="0.9532684609293938"></String>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HPOS="1577"
+                   VPOS="711"
+                   WIDTH="52"
+                   HEIGHT="175"
+                   ID="eSc_textblock_b6482907"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="1603 711 1629 711 1629 881 1592 886 1577 741 1603 711"/></Shape>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

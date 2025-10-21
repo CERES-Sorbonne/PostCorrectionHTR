@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.loc.gov/standards/alto/ns-v4#"
+      xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v4# http://www.loc.gov/standards/alto/v4/alto-4-2.xsd">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>R52_1_64.jpg</fileName>
+    </sourceImageInformation>
+  </Description>
+  <Tags>
+    <OtherTag ID="BT1" LABEL="Title" DESCRIPTION="block type Title"/><OtherTag ID="BT2" LABEL="Main" DESCRIPTION="block type Main"/><OtherTag ID="BT3" LABEL="Commentary" DESCRIPTION="block type Commentary"/><OtherTag ID="BT4" LABEL="Illustration" DESCRIPTION="block type Illustration"/><OtherTag ID="BT21" LABEL="text" DESCRIPTION="block type text"/>
+    <OtherTag ID="LT19" LABEL="default" DESCRIPTION="line type default"/>
+  </Tags>
+  <Layout>
+    <Page WIDTH="1659"
+          HEIGHT="2256"
+          PHYSICAL_IMG_NR="63"
+          ID="eSc_dummypage_">
+      <PrintSpace HPOS="0"
+                  VPOS="0"
+                  WIDTH="1659"
+                  HEIGHT="2256">
+        <TextBlock HPOS="401"
+                   VPOS="120"
+                   WIDTH="1117"
+                   HEIGHT="299"
+                   ID="eSc_textblock_5aee753e"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="475 120 590 125 596 145 1463 150 1518 175 1518 219 1498 279 1428 309 1344 314 1317 369 1274 389 1257 419 1133 419 1077 349 852 354 786 329 481 324 401 199 401 150 475 120"/></Shape>
+          <TextLine ID="eSc_line_2409cdac"
+                    TAGREFS="LT19"
+                    BASELINE="477 202 855 189 1506 198" 
+                    HPOS="475"
+                    VPOS="144"
+                    WIDTH="1027"
+                    HEIGHT="87">
+            <Shape><Polygon POINTS="1489 163 1459 150 1453 150 1429 161 1213 161 1192 148 1147 148 1094 156 1066 148 1032 146 1027 154 1019 159 968 159 955 146 889 146 872 161 829 161 818 148 754 159 739 146 603 144 475 148 475 227 539 206 596 206 615 225 624 225 639 208 692 208 724 231 754 231 778 210 870 218 882 208 917 231 995 231 1028 210 1055 223 1090 212 1156 229 1164 229 1186 208 1290 208 1316 227 1502 223 1502 167 1489 163"/></Shape>
+	    <String CONTENT="MM. Dafey est chargé dela somme de quatre"
+                    HPOS="475"
+                    VPOS="144"
+                    WIDTH="1027"
+                    HEIGHT="87"
+                    WC="0.9470175853589686"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_1ce13cd2"
+                    TAGREFS="LT19"
+                    BASELINE="468 245 608 249 821 244 1489 253" 
+                    HPOS="467"
+                    VPOS="210"
+                    WIDTH="1022"
+                    HEIGHT="79">
+            <Shape><Polygon POINTS="468 245 467 260 596 273 598 273 599 273 614 265 629 256 642 265 648 271 649 271 650 271 652 271 653 271 672 266 697 260 721 268 732 271 733 271 734 271 736 271 744 269 761 263 773 269 779 273 781 273 782 273 783 273 791 270 825 258 858 258 902 273 912 276 914 276 915 276 916 276 925 274 963 261 1027 274 1028 274 1029 274 1044 266 1055 274 1057 274 1058 274 1059 274 1060 274 1089 261 1119 263 1152 279 1153 279 1154 279 1156 279 1193 261 1233 268 1235 268 1277 263 1321 285 1327 288 1329 288 1487 289 1489 253 1488 229 1438 229 1434 228 1404 216 1403 216 1401 216 1400 216 1380 228 1373 231 1366 228 1341 215 1340 215 1256 215 1255 215 1253 215 1238 223 1197 219 1196 219 1156 226 1141 229 1136 226 1109 213 1108 213 1065 213 1064 213 1063 213 1062 213 1049 221 1001 214 1000 214 999 214 975 225 973 228 935 228 912 225 895 224 875 210 874 210 872 210 871 210 802 221 771 210 769 210 768 210 767 210 766 210 746 224 744 225 658 225 655 224 614 210 613 210 611 210 610 210 579 223 566 223 511 223 496 211 495 211 494 211 492 211 491 211 468 221 468 245"/></Shape>
+	    <String CONTENT="bvingts huit livres quatre sols pour trois loges"
+                    HPOS="467"
+                    VPOS="210"
+                    WIDTH="1022"
+                    HEIGHT="79"
+                    WC="0.9770705886185169"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_d7831bc1"
+                    TAGREFS="LT19"
+                    BASELINE="485 304 917 294 1305 300" 
+                    HPOS="484"
+                    VPOS="261"
+                    WIDTH="821"
+                    HEIGHT="86">
+            <Shape><Polygon POINTS="485 304 486 333 502 324 571 322 625 334 626 334 628 334 663 322 702 335 722 343 723 343 724 343 726 343 748 337 761 333 768 337 783 344 784 344 786 344 787 344 808 337 827 330 846 338 865 345 866 345 867 347 920 347 920 345 921 345 934 339 955 327 994 339 1005 343 1006 343 1008 343 1009 343 1010 343 1014 339 1040 319 1134 319 1141 324 1141 325 1142 325 1143 325 1144 325 1185 319 1227 343 1228 343 1230 343 1231 344 1305 344 1305 300 1304 275 1210 261 1208 261 1207 261 1206 261 1192 274 1162 265 1161 265 1159 265 1158 265 1139 273 1127 263 1126 263 1124 263 1123 263 1122 263 1121 263 1102 276 1063 276 1033 263 1032 263 1030 263 1029 263 1004 276 956 276 937 266 936 266 935 266 934 266 915 271 899 264 897 264 896 264 895 264 858 276 841 264 840 264 838 264 837 264 836 264 835 264 835 265 822 276 738 276 705 264 704 264 703 264 630 265 629 265 628 265 611 279 547 279 527 265 526 265 525 265 524 265 522 265 484 279 485 304"/></Shape>
+	    <String CONTENT="de chadume du prceisse de Conty"
+                    HPOS="484"
+                    VPOS="261"
+                    WIDTH="821"
+                    HEIGHT="86"
+                    WC="0.9761667463087267"></String>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HPOS="561"
+                   VPOS="1458"
+                   WIDTH="4"
+                   HEIGHT="4"
+                   ID="eSc_textblock_431e3e98"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="565 1458 565 1462 561 1462 561 1458 565 1458"/></Shape>
+        </TextBlock>
+        <TextBlock HPOS="842"
+                   VPOS="2200"
+                   WIDTH="9"
+                   HEIGHT="9"
+                   ID="eSc_textblock_80e9e79f"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="846 2200 846 2204 851 2209 842 2209 846 2200"/></Shape>
+        </TextBlock>
+        <TextBlock HPOS="546"
+                   VPOS="360"
+                   WIDTH="24"
+                   HEIGHT="14"
+                   ID="eSc_textblock_aa61dd91"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="549 360 570 360 570 374 546 374 549 360"/></Shape>
+        </TextBlock>
+        <TextBlock HPOS="963"
+                   VPOS="370"
+                   WIDTH="3"
+                   HEIGHT="4"
+                   ID="eSc_textblock_f13d49f5"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="966 370 966 374 963 374 963 370 966 370"/></Shape>
+        </TextBlock>
+        <TextBlock HPOS="1615"
+                   VPOS="1032"
+                   WIDTH="38"
+                   HEIGHT="39"
+                   ID="eSc_textblock_e41e171c"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="1633 1032 1653 1047 1653 1071 1615 1071 1633 1032"/></Shape>
+        </TextBlock>
+        <TextBlock HPOS="846"
+                   VPOS="2160"
+                   WIDTH="15"
+                   HEIGHT="9"
+                   ID="eSc_textblock_95d7c69b"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="846 2160 861 2160 861 2164 847 2169 846 2160"/></Shape>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

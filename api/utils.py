@@ -25,10 +25,10 @@ def parse_xml_lines(xml_file: str) -> list[LineInfo]:
     # Chercher tous les TextLine elements
     for textline in root.findall('.//alto:TextLine', namespace):
         line_id = textline.get('ID', '')
-        hpos = int(textline.get('HPOS', 0))
-        vpos = int(textline.get('VPOS', 0))
-        width = int(textline.get('WIDTH', 0))
-        height = int(textline.get('HEIGHT', 0))
+        hpos = float(textline.get('HPOS', 0))
+        vpos = float(textline.get('VPOS', 0))
+        width = float(textline.get('WIDTH', 0))
+        height = float(textline.get('HEIGHT', 0))
 
         # Récupérer le contenu de la ligne
         string_elem = textline.find('.//alto:String', namespace)
@@ -45,7 +45,7 @@ def parse_xml_lines(xml_file: str) -> list[LineInfo]:
 
     return lines
 
-def get_bounding_box_for_lines(lines: list[LineInfo]) -> tuple[int, int, int, int]:
+def get_bounding_box_for_lines(lines: list[LineInfo]) -> tuple[float, float, float, float]:
     """Calcule la bounding box englobant plusieurs lignes."""
     if not lines:
         return (0, 0, 0, 0)

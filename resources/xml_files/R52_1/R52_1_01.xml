@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.loc.gov/standards/alto/ns-v4#"
+      xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v4# http://www.loc.gov/standards/alto/v4/alto-4-2.xsd">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>R52_1_01.jpg</fileName>
+    </sourceImageInformation>
+  </Description>
+  <Tags>
+    <OtherTag ID="BT1" LABEL="Title" DESCRIPTION="block type Title"/><OtherTag ID="BT2" LABEL="Main" DESCRIPTION="block type Main"/><OtherTag ID="BT3" LABEL="Commentary" DESCRIPTION="block type Commentary"/><OtherTag ID="BT4" LABEL="Illustration" DESCRIPTION="block type Illustration"/><OtherTag ID="BT21" LABEL="text" DESCRIPTION="block type text"/>
+    <OtherTag ID="LT19" LABEL="default" DESCRIPTION="line type default"/>
+  </Tags>
+  <Layout>
+    <Page WIDTH="1544"
+          HEIGHT="2256"
+          PHYSICAL_IMG_NR="0"
+          ID="eSc_dummypage_">
+      <PrintSpace HPOS="0"
+                  VPOS="0"
+                  WIDTH="1544"
+                  HEIGHT="2256">
+        <TextBlock HPOS="200"
+                   VPOS="235"
+                   WIDTH="1103"
+                   HEIGHT="676"
+                   ID="eSc_textblock_6aaf3e8d"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="590 235 741 235 776 275 766 309 781 334 822 345 1072 345 1088 330 1028 320 1182 285 1143 259 1168 245 1212 255 1204 285 1273 300 1273 344 1303 365 1303 389 1259 404 1253 439 1202 475 1063 510 1057 585 951 641 967 695 931 730 1278 772 1283 851 721 911 220 906 200 881 210 772 284 752 306 711 351 685 321 665 336 601 280 490 280 411 376 320 545 305 590 235"/></Shape>
+          <TextLine ID="eSc_line_f80a9128"
+                    BASELINE="561 295 692 278" 
+                    HPOS="560"
+                    VPOS="236"
+                    WIDTH="130"
+                    HEIGHT="102">
+            <Shape><Polygon POINTS="573 259 560 278 560 293 566 338 601 336 603 336 605 336 605 334 616 323 641 297 688 298 690 276 680 236 573 257 573 259"/></Shape>
+	    <String CONTENT="fer"
+                    HPOS="560"
+                    VPOS="236"
+                    WIDTH="130"
+                    HEIGHT="102"
+                    WC="0.9999742905298868"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_8744d947"
+                    TAGREFS="LT19"
+                    BASELINE="302 435 800 436 1117 426" 
+                    HPOS="299"
+                    VPOS="359"
+                    WIDTH="816"
+                    HEIGHT="114">
+            <Shape><Polygon POINTS="300 434 300 447 494 473 500 473 530 447 577 447 646 470 684 453 714 468 720 468 780 445 810 470 919 460 938 470 944 470 985 449 1021 464 1028 464 1043 447 1115 441 1115 424 1113 398 1056 359 868 360 808 402 774 402 752 381 744 381 725 391 708 374 641 374 571 400 567 404 494 404 466 389 460 389 432 404 411 389 404 389 372 404 299 402 300 434"/></Shape>
+	    <String CONTENT="Pivre des feuilles"
+                    HPOS="299"
+                    VPOS="359"
+                    WIDTH="816"
+                    HEIGHT="114"
+                    WC="0.9834345479806265"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_6b3090c6"
+                    TAGREFS="LT19"
+                    BASELINE="383 642 597 646 883 637" 
+                    HPOS="379"
+                    VPOS="564"
+                    WIDTH="503"
+                    HEIGHT="152">
+            <Shape><Polygon POINTS="381 641 381 682 481 686 526 716 624 716 650 689 707 667 737 674 786 659 882 659 878 594 833 594 799 567 791 567 720 588 695 564 658 564 599 595 551 595 519 565 409 567 379 594 381 641"/></Shape>
+	    <String CONTENT="Dassemblée"
+                    HPOS="379"
+                    VPOS="564"
+                    WIDTH="503"
+                    HEIGHT="152"
+                    WC="0.9952120840549469"></String>
+          </TextLine>
+          <TextLine ID="eSc_line_afa29535"
+                    TAGREFS="LT19"
+                    BASELINE="216 858 648 842 1265 835" 
+                    HPOS="214"
+                    VPOS="777"
+                    WIDTH="1051"
+                    HEIGHT="120">
+            <Shape><Polygon POINTS="216 858 216 897 322 897 323 897 329 894 380 871 435 863 465 868 466 868 467 868 485 861 534 884 535 884 536 884 574 881 600 883 672 891 673 891 698 889 699 889 719 878 761 856 786 856 816 871 817 871 819 871 820 871 860 854 885 869 886 869 888 869 889 869 890 869 921 859 938 864 939 864 940 864 941 864 943 864 964 852 979 858 980 858 982 858 983 858 1010 851 1054 864 1058 866 1059 866 1061 866 1062 866 1063 866 1064 864 1071 859 1102 862 1103 862 1105 862 1126 853 1137 861 1138 861 1140 861 1141 861 1142 861 1143 861 1156 851 1195 849 1224 858 1237 862 1239 862 1240 862 1265 856 1265 835 1261 777 1161 795 1118 793 1101 780 1099 780 1098 780 1079 780 1069 780 1068 780 1067 780 1041 793 1015 788 1014 788 1013 788 1012 788 998 799 975 799 950 785 949 785 948 785 946 785 889 807 809 788 807 788 806 788 805 788 772 810 740 810 679 788 678 788 677 788 634 789 633 789 597 805 573 804 571 804 570 804 543 815 346 817 294 795 293 795 292 795 290 795 214 797 216 858"/></Shape>
+	    <String CONTENT="Depuis Lundy 12e avril 1706."
+                    HPOS="214"
+                    VPOS="777"
+                    WIDTH="1051"
+                    HEIGHT="120"
+                    WC="0.9926612313304629"></String>
+          </TextLine>
+        </TextBlock>
+        <TextBlock HPOS="95"
+                   VPOS="1940"
+                   WIDTH="124"
+                   HEIGHT="69"
+                   ID="eSc_textblock_90f52c0f"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="117 1940 219 1955 219 2009 105 2009 95 1960 117 1940"/></Shape>
+        </TextBlock>
+        <TextBlock HPOS="188"
+                   VPOS="2080"
+                   WIDTH="21"
+                   HEIGHT="19"
+                   ID="eSc_textblock_dc811499"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="188 2080 204 2080 209 2094 190 2099 188 2080"/></Shape>
+        </TextBlock>
+        <TextBlock HPOS="571"
+                   VPOS="1920"
+                   WIDTH="105"
+                   HEIGHT="48"
+                   ID="eSc_textblock_a131800f"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="644 1920 676 1925 676 1968 571 1963 581 1925 644 1920"/></Shape>
+        </TextBlock>
+        <TextBlock HPOS="913"
+                   VPOS="310"
+                   WIDTH="38"
+                   HEIGHT="14"
+                   ID="eSc_textblock_ea857daf"
+                   TAGREFS="BT21">
+          <Shape><Polygon POINTS="921 310 941 310 951 324 913 324 921 310"/></Shape>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

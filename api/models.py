@@ -7,10 +7,10 @@ class LineInfo:
     """Structure pour stocker les informations d'une ligne."""
     id: str
     content: str
-    hpos: int
-    vpos: int
-    width: int
-    height: int
+    hpos: int | float
+    vpos: int | float
+    width: int | float
+    height: int | float
 
 
 @dataclass
@@ -22,4 +22,4 @@ class WordContext:
     next_line: Optional[str]
     cropped_image: bytes
     xml_file: str
-    line_index: int
+    line_index: int | float
