@@ -49,13 +49,13 @@
         {% if corrections %}
           {% for correction in corrections %}
             <div class="btn-group w-100 mb-2" role="group" aria-label="Basic example">
-              <button type="submit" name="correction" value="{{ correction }}" class="btn btn-outline-primary w-100 text-start" id="btn-correction-{{ loop.index }}">
+              <button type="submit" name="correction" value="{{ correction }}" class="btn btn-outline-primary w-100 text-start" id="btn-correction-{{ loop.index }}" title="Sauvegarder en ajoutant une règle de correction">
                 <span class="d-flex align-items-center gap-2">
                   <span class="badge text-bg-primary">{{ loop.index }}</span>
                   {{ correction }}
                 </span>
               </button>
-              <button type="submit" name="correction" value="{{ correction }}" formaction="/correct?save_rule=False" class="btn btn-outline-warning"><i class="bi bi-marker-tip"></i></button>
+              <button type="submit" name="correction" value="{{ correction }}" formaction="/correct?save_rule=False" class="btn btn-outline-warning" title="Sauvegarder sans ajouter de règle de correction"><i class="bi bi-marker-tip"></i></button>
             </div>
           {% endfor %}
         {% else %}
