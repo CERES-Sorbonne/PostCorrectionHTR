@@ -3,6 +3,9 @@ resources/to_correct/*
 xml_files/*
 *_postcorrected.txt
 
+*.iml
+*.idea
+
 __pycache__/
 *.py[cod]
 *$py.class

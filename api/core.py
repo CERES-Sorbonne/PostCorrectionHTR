@@ -11,18 +11,22 @@ from PIL import Image
 from .models import WordContext
 from .utils import parse_xml_lines, crop_image_for_context, _get_xml_files
 
-to_correct_dir = Path("../resources/to_correct")
+# Définir le dossier resources par rapport au fichier actuel
+SCRIPT_DIR = Path(__file__).parent
+RESOURCES_DIR = SCRIPT_DIR.parent / "resources"
+
+to_correct_dir = RESOURCES_DIR / "to_correct"
 txt_files = list(to_correct_dir.glob("*.txt"))
 
 if not txt_files:
     raise FileNotFoundError("Aucun fichier .txt trouvé dans le dossier to_correct")
 
 TO_CORRECT_PATH = txt_files[0]
-CORRECTED_PATH = Path("../resources") / (TO_CORRECT_PATH.stem + "_postcorrected.txt")
+CORRECTED_PATH = RESOURCES_DIR / (TO_CORRECT_PATH.stem + "_postcorrected.txt")
 
-DICO_PATH = '../resources/dico.json'
-RULES_PATH = '../resources/correct_rules.json'
-XML_FILES_PATH = "../resources/xml_files/"
+DICO_PATH = RESOURCES_DIR / 'dico.json'
+RULES_PATH = RESOURCES_DIR / 'correct_rules.json'
+XML_FILES_PATH = RESOURCES_DIR / "xml_files"
 
 
 class DataManager:
