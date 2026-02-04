@@ -1,5 +1,6 @@
 import html
 from contextlib import asynccontextmanager
+from pathlib import Path
 from xml.sax.saxutils import escape
 
 from fastapi import FastAPI, Request, Form
@@ -17,7 +18,7 @@ async def lifespan(app: FastAPI):
     yield
     manager.save_data()
 app = FastAPI(lifespan=lifespan)
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
 
 
 @app.get("/")
