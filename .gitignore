@@ -1,4 +1,8 @@
 # Byte-compiled / optimized / DLL files
+resources/to_correct/*
+xml_files/*
+*_postcorrected.txt
+
 __pycache__/
 *.py[cod]
 *$py.class

@@ -11,11 +11,18 @@ from PIL import Image
 from models import WordContext
 from utils import parse_xml_lines, crop_image_for_context, _get_xml_files
 
+to_correct_dir = Path("../resources/to_correct")
+txt_files = list(to_correct_dir.glob("*.txt"))
+
+if not txt_files:
+    raise FileNotFoundError("Aucun fichier .txt trouvé dans le dossier to_correct")
+
+TO_CORRECT_PATH = txt_files[0]
+CORRECTED_PATH = Path("../resources") / (TO_CORRECT_PATH.stem + "_postcorrected.txt")
+
 DICO_PATH = '../resources/dico.json'
 RULES_PATH = '../resources/correct_rules.json'
-TO_CORRECT_PATH = "../resources/to_correct/R52_1.txt"
-CORRECTED_PATH = "../resources/R52_1_postcorrige"
-XML_FILES_PATH = "../resources/xml_files/R52_1"
+XML_FILES_PATH = "../resources/xml_files/"
 
 
 class DataManager:
