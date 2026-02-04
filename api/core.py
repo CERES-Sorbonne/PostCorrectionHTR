@@ -8,8 +8,8 @@ from pathlib import Path
 from Levenshtein import distance
 from PIL import Image
 
-from models import WordContext
-from utils import parse_xml_lines, crop_image_for_context, _get_xml_files
+from .models import WordContext
+from .utils import parse_xml_lines, crop_image_for_context, _get_xml_files
 
 to_correct_dir = Path("../resources/to_correct")
 txt_files = list(to_correct_dir.glob("*.txt"))

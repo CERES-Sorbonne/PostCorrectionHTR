@@ -2,7 +2,7 @@ import base64
 import os
 from io import BytesIO
 
-from models import LineInfo
+from .models import LineInfo
 import xml.etree.ElementTree as ET
 from PIL import Image
 

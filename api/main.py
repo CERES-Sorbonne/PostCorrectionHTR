@@ -6,8 +6,8 @@ from fastapi import FastAPI, Request, Form
 from fastapi.responses import RedirectResponse
 from fastapi.templating import Jinja2Templates
 
-from models import WordContext
-from core import DataManager
+from .models import WordContext
+from .core import DataManager
 
 manager = DataManager()
 iterator = manager.generate_sample_from_xml()
