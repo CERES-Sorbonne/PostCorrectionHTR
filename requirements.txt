@@ -2,3 +2,4 @@ levenshtein
 fastapi
 uvicorn
 pillow
+jinja2
