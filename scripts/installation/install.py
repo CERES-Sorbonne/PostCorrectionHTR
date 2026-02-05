@@ -65,6 +65,7 @@ def check_uv_installed():
     return result is not None and result.returncode == 0
 
 def install_uv():
+
     """Installe uv via PowerShell"""
     print_info("Installation de uv...")
 
@@ -80,8 +81,12 @@ def install_uv():
         # Ajouter le chemin de uv au PATH pour cette session
         user_profile = os.environ.get('USERPROFILE', '')
         uv_path = os.path.join(user_profile, '.cargo', 'bin')
+
         if os.path.exists(uv_path):
             os.environ['PATH'] = uv_path + os.pathsep + os.environ['PATH']
+
+        local_bin = Path.home() / ".local" / "bin"
+        os.environ["PATH"] = f"{local_bin}{os.pathsep}{os.environ.get('PATH', '')}"
 
         return True
     else:
