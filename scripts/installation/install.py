@@ -15,7 +15,7 @@ import time
 # Configuration
 REPO_URL = "https://github.com/CERES-Sorbonne/PostCorrectionHTR/archive/refs/heads/main.zip"
 REPO_DIR = "PostCorrectionHTR"
-VENV_DIR = "post_correction_env"
+VENV_DIR = ".venv"
 PYTHON_VERSION = "3.13"
 
 # Couleurs pour les messages (Windows)
