@@ -70,7 +70,7 @@ def install_uv():
 
     # Commande PowerShell pour installer uv
     ps_command = 'irm https://astral.sh/uv/install.ps1 | iex'
-    command = f'powershell -Command "{ps_command}"'
+    command = f'powershell -ExecutionPolicy ByPass -c "{ps_command}"'
 
     result = run_command(command, check=False)
 
